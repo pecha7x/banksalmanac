@@ -23,6 +23,8 @@ class Bank < ApplicationRecord
     end
   end
 
+  validates :name, inclusion: { in: NAMES }
+
   acts_as_paranoid
 
   serialize :data

@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :bank do
-    name { 'bank' }
+    name { Bank::NAMES.sample }
     enabled { true }
   end
 end
