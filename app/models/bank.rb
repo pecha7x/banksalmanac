@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: banks
@@ -11,11 +13,11 @@
 #  deleted_at :datetime
 #
 class Bank < ApplicationRecord
-  NAMES = %w(unibank).freeze
+  NAMES = %w[unibank].freeze
 
-  DATA_FIELDS = %i(
+  DATA_FIELDS = %i[
     username password key_path
-  ).freeze
+  ].freeze
 
   DATA_FIELDS.each do |field|
     define_method("data_#{field}") do
