@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2022_04_10_162518) do
     t.text "data"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.datetime "deleted_at", precision: 6, null: false
+    t.datetime "deleted_at"
   end
 
 end
