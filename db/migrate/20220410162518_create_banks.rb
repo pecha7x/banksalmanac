@@ -4,9 +4,8 @@ class CreateBanks < ActiveRecord::Migration[6.0]
       t.string :name
       t.boolean :enabled
       t.text :data
-
-      t.datetime :deleted_at
       t.timestamps
+      t.datetime :deleted_at
     end
   end
 end
