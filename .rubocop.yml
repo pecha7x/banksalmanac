@@ -10,3 +10,8 @@ AllCops:
     - vendor/**/*
     - tmp/**/*
     - node_modules/**/*
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Metrics/BlockLength:
+  IgnoredMethods: ['describe', 'context']
+
