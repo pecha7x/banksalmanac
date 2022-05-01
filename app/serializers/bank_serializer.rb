@@ -1,3 +1,3 @@
 class BankSerializer < ActiveModel::Serializer
-  attributes :id, :name, :enabled, :data
+  attributes :id, :name, :status, :country, :enabled, :data
 end

@@ -3,18 +3,27 @@ import Assessment from 'material-ui/svg-icons/action/assessment';
 import GridOn from 'material-ui/svg-icons/image/grid-on';
 import PermIdentity from 'material-ui/svg-icons/action/perm-identity';
 import Web from 'material-ui/svg-icons/av/web';
-import {cyan600, pink600, purple600} from 'material-ui/styles/colors';
+import BusinessCenter from 'material-ui/svg-icons/places/business-center';
+import {cyan600, pink600, purple600, indigoA100,teal50} from 'material-ui/styles/colors';
 import ExpandLess from 'material-ui/svg-icons/navigation/expand-less';
 import ExpandMore from 'material-ui/svg-icons/navigation/expand-more';
-import ChevronRight from 'material-ui/svg-icons/navigation/chevron-right';
 
 const data = {
   menus: [
     { text: 'DashBoard', icon: <Assessment/>, link: '/dashboard' },
-    { text: 'Form Page', icon: <Web/>, link: '/form' },
-    { text: 'Table Page', icon: <GridOn/>, link: '/table' },
-    { text: 'Login Page', icon: <PermIdentity/>, link: '/login' }
+    { text: 'Banks', icon: <BusinessCenter/>, link: '/banks' }
+    // { text: 'Form Page', icon: <Web/>, link: '/form' },
+    // { text: 'Table Page', icon: <GridOn/>, link: '/table' },
   ],
+  BanksPage: {
+    items: [
+      {id: 1, name: 'Tochka', country: 'Russian Federation', status: 'Freezed'},
+      {id: 2, name: 'Tinkoff', country: 'Russian Federation', status: 'Active'},
+      {id: 3, name: 'Unibank', country: 'Republic of Armenia', status: 'Active'},
+      {id: 4, name: 'Ameriabank', country: 'Republic of Armenia', status: 'Active'},
+      {id: 5, name: 'Inecobank', country: 'Republic of Armenia', status: 'Active'}
+    ]
+  },
   tablePage: {
     items: [
       {id: 1, name: 'Product 1', price: '$50.00', category: 'Category 1'},
@@ -28,13 +37,14 @@ const data = {
     ]
   },
   dashBoardPage: {
-    recentProducts: [
-      {id: 1, title: 'Samsung TV', text: 'Samsung 32 1080p 60Hz LED Smart HDTV.'},
-      {id: 2, title: 'Playstation 4', text: 'PlayStation 3 500 GB System'},
-      {id: 3, title: 'Apple iPhone 6', text: 'Apple iPhone 6 Plus 16GB Factory Unlocked GSM 4G '},
-      {id: 4, title: 'Apple MacBook', text: 'Apple MacBook Pro MD101LL/A 13.3-Inch Laptop'}
+    recentOperations: [
+      {id: 1, title: 'Credit (Unibank)', type: 'credit', text: '$500 received from Upwork'},
+      {id: 2, title: 'Debit (Unibank)', type: 'debit', text: '50000 AMD paid for service'},
+      {id: 3, title: 'Credit (Tinkoff)', type: 'credit', text: '$6000 received from Upwork'},
+      {id: 4, title: 'Credit (Tinkoff)', type: 'credit', text: '$370 received from Upwork'},
+      {id: 5, title: 'Credit (Inecobank)', type: 'credit', text: '$480 received from Inecobank'}
     ],
-    monthlySales: [
+    monthlyProfit: [
       {name: 'Jan', uv: 3700},
       {name: 'Feb', uv: 3000},
       {name: 'Mar', uv: 2000},
@@ -48,7 +58,7 @@ const data = {
       {name: 'Nov', uv: 2400},
       {name: 'Dec', uv: 2780}
     ],
-    newOrders: [
+    withdraws: [
       {pv: 2400},
       {pv: 1398},
       {pv: 9800},
@@ -57,10 +67,12 @@ const data = {
       {pv: 3490},
       {pv: 4300}
     ],
-    browserUsage: [
-      {name: 'Chrome', value: 800, color: cyan600, icon: <ExpandMore/>},
-      {name: 'Firefox', value: 300, color: pink600, icon: <ChevronRight/>},
-      {name: 'Safari', value: 300, color: purple600, icon: <ExpandLess/>}
+    bankUsage: [
+      {name: 'Tinkoff', value: 800, color: cyan600, icon: <ExpandMore/>},
+      {name: 'Unibank', value: 100, color: pink600, icon: <ExpandMore/>},
+      {name: 'Inecobank', value: 100, color: purple600, icon: <ExpandMore/>},
+      {name: 'Ameriabank', value: 100, color: indigoA100, icon: <ExpandMore/>},
+      {name: 'Tochka', value: 0, color: teal50, icon: <ExpandMore/>}
     ]
   }
 };

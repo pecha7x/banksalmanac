@@ -1,5 +1,4 @@
 import React, {PropTypes} from 'react';
-import {Link} from 'react-router';
 import AppBar from 'material-ui/AppBar';
 import IconButton from 'material-ui/IconButton';
 import IconMenu from 'material-ui/IconMenu';
@@ -7,7 +6,7 @@ import MenuItem from 'material-ui/MenuItem';
 import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
 import Menu from 'material-ui/svg-icons/navigation/menu';
 import ViewModule from 'material-ui/svg-icons/action/view-module';
-import {white} from 'material-ui/styles/colors';
+import {white, black} from 'material-ui/styles/colors';
 import SearchBox from './SearchBox';
 
 class Header extends React.Component {
@@ -27,6 +26,11 @@ class Header extends React.Component {
       },
       iconsRightContainer: {
         marginLeft: 20
+      },
+      signOutButton: {
+        color: black,
+        paddingLeft: 10
+
       }
     };
 
@@ -62,7 +66,7 @@ class Header extends React.Component {
                             targetOrigin={{horizontal: 'right', vertical: 'top'}}
                             anchorOrigin={{horizontal: 'right', vertical: 'top'}}
                   >
-                    <MenuItem primaryText="Sign out" containerElement={<Link to="/login"/>}/>
+                    <a style={style.signOutButton} href="/users/sign_out" rel="nofollow">Sign Out</a>
                   </IconMenu>
                 </div>
               }

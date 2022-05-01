@@ -41,3 +41,7 @@ gem 'rubocop-rails', require: false
 gem 'rubocop-rspec', require: false
 
 gem 'active_model_serializers'
+
+gem 'devise'
+gem 'devise-bootstrap5'
+gem 'devise-i18n'

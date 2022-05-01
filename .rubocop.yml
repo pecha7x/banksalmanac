@@ -1,6 +1,8 @@
 require: rubocop-rails
 Style/Documentation:
   Enabled: false
+Rails/BulkChangeTable:
+  Enabled: false
 AllCops:
   NewCops: enable
   DisplayCopNames: true
@@ -14,4 +16,13 @@ Style/FrozenStringLiteralComment:
   Enabled: false
 Metrics/BlockLength:
   IgnoredMethods: ['describe', 'context']
-
+Metrics/LineLength:
+  Max: 120
+  Enabled: true
+  Exclude:
+    - spec/**/*.rb
+    - config/initializers/devise.rb
+Metrics/MethodLength:
+  Enabled: true
+  Exclude:
+    - db/migrate/*

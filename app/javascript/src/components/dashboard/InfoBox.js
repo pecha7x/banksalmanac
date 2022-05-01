@@ -11,12 +11,12 @@ class InfoBox extends React.Component {
     const styles = {
       content: {
         padding: '5px 10px',
-        marginLeft: 90,
-        height: 80
+        textAlign: 'center',
+        height: 50
       },
       number: {
         display: 'block',
-        fontWeight: typography.fontWeightMedium,
+        fontWeight: 600,
         fontSize: 18,
         color: grey800
       },
@@ -27,15 +27,15 @@ class InfoBox extends React.Component {
       },
       iconSpan: {
         float: 'left',
-        height: 90,
-        width: 90,
+        height: 60,
+        width: 60,
         textAlign: 'center',
         backgroundColor: color
       },
       icon: {
-        height: 48,
-        width: 48,
-        marginTop: 20,
+        height: 38,
+        width: 38,
+        marginTop: 12,
         maxWidth: '100%'
 
       }

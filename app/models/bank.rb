@@ -1,19 +1,8 @@
 # frozen_string_literal: true
 
-# == Schema Information
-#
-# Table name: banks
-#
-#  id         :bigint           not null, primary key
-#  name       :string
-#  enabled    :boolean
-#  data       :text
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
-#  deleted_at :datetime
-#
 class Bank < ApplicationRecord
-  NAMES = %w[unibank].freeze
+  NAMES = %w[unibank tochka tinkoff ameriabank inecobank sberbank].freeze
+  STATUSES = %w[active in-active pending].freeze
 
   DATA_FIELDS = %i[
     username password key_path
@@ -25,7 +14,10 @@ class Bank < ApplicationRecord
     end
   end
 
+  belongs_to :user
+
   validates :name, inclusion: { in: NAMES }
+  validates :status, inclusion: { in: STATUSES }
 
   acts_as_paranoid
 
